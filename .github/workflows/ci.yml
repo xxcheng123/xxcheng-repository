@@ -46,5 +46,13 @@ jobs:
           remote_addr=https://${user_name}:${{secrets.TOKEN}}@${remote_addr}
           git remote add origin ${remote_addr}
           git push origin HEAD:$deploy_branch --force # 推送到github $deploy_branch分支
-
+      - name: Sync-to-Qiniu
+        uses: luochongfei/up2qn@master
+        with:
+          bucket: xxcheng-repository # 空间名称，按实际情况填写
+          zone: 华南 # 存储区域，按实际情况填写 备注1
+          access_key: ${{ secrets.QINIU_AK }} # 七牛云 AccessKey 备注2
+          secret_key: ${{ secrets.QINIU_SK }} # 七牛云 SecretKey 备注2
+          local_dir: docs/.vuepress/dist # 本地文件夹
+          target_dir: / # 要上传到七牛云中的文件夹
       # 只提交到github pages也可以使用github-pages-deploy-action，详见: https://github.com/JamesIves/github-pages-deploy-action
