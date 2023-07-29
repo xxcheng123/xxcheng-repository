@@ -30,8 +30,9 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     nav: [
       { text: '首页', link: '/' },
       { text: 'Golang', link: '/golang/' },
-      { text: 'JavaScript', link: '/javascript/' },
-      { text: 'Vue', link: '/vue/' },
+      { text: 'MySQL', link: '/mysql/' },
+      // { text: 'JavaScript', link: '/javascript/' },
+      // { text: 'Vue', link: '/vue/' },
       {
         text: '归档',
         link: '/archives/'
