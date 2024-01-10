@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>day02 | 小小程知识库</title>
+    <meta name="generator" content="VuePress 1.9.5">
+    <link rel="icon" href="https://cdn-static.xxcheng.cn/static/public/logo/64_64.ico">
+    <meta name="description" content="个人总结知识库,专注前端、Golang">
+    <meta name="keywords" content="xxcheng知识库,小小程知识库,知识库,前端知识库,Golang知识库,前端,前端开发,前端框架,web前端,技术文档,学习,JavaScript,js,ES6,TypeScript,vue,golang,css3,html5,Node,git,github,markdown">
+    <meta name="baidu-site-verification" content="z3ADKJ0W8g">
+    <meta name="theme-color" content="#11a8cd">
+    
+    <link rel="preload" href="/assets/css/0.styles.bf945c37.css" as="style"><link rel="preload" href="/assets/js/app.93b3f0b1.js" as="script"><link rel="preload" href="/assets/js/2.aec7a7f0.js" as="script"><link rel="preload" href="/assets/js/32.f35acc80.js" as="script"><link rel="prefetch" href="/assets/js/10.300e00aa.js"><link rel="prefetch" href="/assets/js/11.0e98b3ed.js"><link rel="prefetch" href="/assets/js/12.6f626e41.js"><link rel="prefetch" href="/assets/js/13.d0c640b1.js"><link rel="prefetch" href="/assets/js/14.eebbe75b.js"><link rel="prefetch" href="/assets/js/15.b16a109f.js"><link rel="prefetch" href="/assets/js/16.9f2e200b.js"><link rel="prefetch" href="/assets/js/17.142a03c6.js"><link rel="prefetch" href="/assets/js/18.cd8ac442.js"><link rel="prefetch" href="/assets/js/19.487fc2bb.js"><link rel="prefetch" href="/assets/js/20.3cb2c94c.js"><link rel="prefetch" href="/assets/js/21.8ccae75c.js"><link rel="prefetch" href="/assets/js/22.aeababc9.js"><link rel="prefetch" href="/assets/js/23.bb235707.js"><link rel="prefetch" href="/assets/js/24.a45213d4.js"><link rel="prefetch" href="/assets/js/25.695efc2d.js"><link rel="prefetch" href="/assets/js/26.6e0dcbe0.js"><link rel="prefetch" href="/assets/js/27.1a3008d3.js"><link rel="prefetch" href="/assets/js/28.c84eaeb6.js"><link rel="prefetch" href="/assets/js/29.5b4cfd9b.js"><link rel="prefetch" href="/assets/js/3.8522f2e0.js"><link rel="prefetch" href="/assets/js/30.02405b51.js"><link rel="prefetch" href="/assets/js/31.0de66001.js"><link rel="prefetch" href="/assets/js/33.1265ba71.js"><link rel="prefetch" href="/assets/js/34.a18cf05a.js"><link rel="prefetch" href="/assets/js/35.479f7270.js"><link rel="prefetch" href="/assets/js/36.9f67f7ae.js"><link rel="prefetch" href="/assets/js/37.80172425.js"><link rel="prefetch" href="/assets/js/38.f1e60099.js"><link rel="prefetch" href="/assets/js/39.ac180027.js"><link rel="prefetch" href="/assets/js/4.b2ea6df6.js"><link rel="prefetch" href="/assets/js/40.d00d1f40.js"><link rel="prefetch" href="/assets/js/5.f0502413.js"><link rel="prefetch" href="/assets/js/6.c2d1667e.js"><link rel="prefetch" href="/assets/js/7.7a24b5ef.js"><link rel="prefetch" href="/assets/js/8.50820b2d.js"><link rel="prefetch" href="/assets/js/9.65fae3ee.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.bf945c37.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-rightmenu"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="https://cdn-static.xxcheng.cn/static/public/logo/640_640.png" alt="小小程知识库" class="logo"> <span class="site-name can-hide">小小程知识库</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/golang/" class="nav-link">Golang</a></div><div class="nav-item"><a href="/mysql/" class="nav-link">MySQL</a></div><div class="nav-item"><a href="/archives/" class="nav-link">归档</a></div> <a href="https://github.com/xxcheng123/xxcheng-repository" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar-hover-trigger"></div> <aside class="sidebar" style="display:none;"><div class="blogger"><img src="https://cdn-static.xxcheng.cn/static/public/logo/640_640.png"> <div class="blogger-info"><h3>xxcheng</h3> <span>记录美好生活~</span></div></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/golang/" class="nav-link">Golang</a></div><div class="nav-item"><a href="/mysql/" class="nav-link">MySQL</a></div><div class="nav-item"><a href="/archives/" class="nav-link">归档</a></div> <a href="https://github.com/xxcheng123/xxcheng-repository" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>剑指offer记录</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/pages/ee8d77/" aria-current="page" class="active sidebar-link">day02</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level2"><a href="/pages/ee8d77/#jz25-合并两个排序的链表" class="sidebar-link">JZ25 合并两个排序的链表</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level3"><a href="/pages/ee8d77/#迭代实现" class="sidebar-link">迭代实现</a></li><li class="sidebar-sub-header level3"><a href="/pages/ee8d77/#递归实现" class="sidebar-link">递归实现</a></li></ul></li><li class="sidebar-sub-header level2"><a href="/pages/ee8d77/#jz52-两个链表的第一个公共结点" class="sidebar-link">JZ52 两个链表的第一个公共结点</a></li></ul></li><li><a href="/pages/ad89ef/" class="sidebar-link">day03</a></li><li><a href="/pages/5fda18/" class="sidebar-link">day04</a></li><li><a href="/pages/473111/" class="sidebar-link">day05</a></li><li><a href="/pages/0c899e/" class="sidebar-link">day06</a></li></ul></section></li></ul> </aside> <div><main class="page"><div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-06225672><div class="articleInfo" data-v-06225672><ul class="breadcrumbs" data-v-06225672><li data-v-06225672><a href="/" title="首页" class="iconfont icon-home router-link-active" data-v-06225672></a></li> <li data-v-06225672><a href="/categories/?category=%E7%AE%97%E6%B3%95" title="分类" data-v-06225672>算法</a></li><li data-v-06225672><a href="/categories/?category=%E5%89%91%E6%8C%87offer%E8%AE%B0%E5%BD%95" title="分类" data-v-06225672>剑指offer记录</a></li></ul> <div class="info" data-v-06225672><div title="作者" class="author iconfont icon-touxiang" data-v-06225672><a href="https://www.xxcheng.cn/" target="_blank" title="作者" class="beLink" data-v-06225672>xxcheng</a></div> <div title="创建时间" class="date iconfont icon-riqi" data-v-06225672><a href="javascript:;" data-v-06225672>2023-07-16</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-title">目录</div> <div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABGpJREFUSA3tVVtoXFUU3fvOI53UlmCaKIFmwEhsE7QK0ipFEdHEKpXaZGrp15SINsXUWvBDpBgQRKi0+KKoFeJHfZA+ED9KKoIU2gYD9UejTW4rVIzm0VSTziPzuNu1z507dibTTjL4U/DAzLn3nL3X2o91ziX6f9wMFdh6Jvbm9nNSV0msViVO6tN1Rm7NMu2OpeJ9lWBUTDxrJbYTS0hInuwciu9eLHlFxCLCZEk3MegsJmZ5K/JD6t7FkFdEvGUo1g7qJoG3MHImqRIn8/nzY1K9UPKKiJmtnUqHVE3Gbuay6vJE/N2FEmuxFjW2nUuE0yQXRRxLiTUAzs36zhZvOXJPdX850EVnnLZkB8prodQoM5JGj7Xk2mvC7JB8tG04Ef5PiXtG0UtxupRQSfTnBoCy554x18yJHI6I+G5Eru4LHmPJZEQsrvPUbMiA8G/WgMK7w7I+ez7++o2ANfbrjvaOl1tFMs+htG3IrZH9/hDX1Pr8Tc0UvH8tcX29KzAgIGcEkINyW5BF9x891hw6VYqgJHEk0huccS7vh3C6gTiODL+26huuBtbct8eZnqLML8PkxGYpuPZBqtqwkSjgc4mB5gbgig5i+y0UDK35LMxXisn9xQtK+nd26gTIHsHe/oblK/b29fUmN/8Y+9jAQrnBp56m1LcDlDp9irKTExSKduXJVWSqdBMA08pEJnEIOB3FPPMybu/oeV8zFeYN3xx576Q6RH+VmplE4ncQV5v+5rzSoyOU7PuEAg8g803PwBJ0CExno/jcMbN8tONYeOmHiuUNryvm3fRUy4tMPVLdAGkUhNWuggGrJcXPv+ouCjz0MKUHz1J2/E8IC9nqTabcxgaBYM0hPhD5Y65FsbxRQKxCQrDjDctW7PUM3HuZunFyifSAqEfuzCp48Il24luWUWZoyJCaPR82jE0+kFA643wRFVni4RYSq3ohJO2pZ7B5dO4xkDWbEpossJPLSrPjYID8rS2UHTlvyNxqIGsg674XJJ7vnh5L7PNwC4hh2sjCI96mzszOTpxLF0T7l88Yz7lAuK6OnL8gXLOnTvpzSb22YG8W7us3jSebFHeeqnXRG1vt+MoUM84LQIBmMsCTAcOauTh0T0l0neQK7m2bLMt2mGxU3HYssS0J2cdv5wljlPsrIuZLAG/2DOZIXgCYT8uMGZN+e2kSirfxZOPCsC0f24nTZzspnVn9VePS1Z5vubmAGGXG8ZFno9Hel0yfA5ZPhF7Dh972BQJ2qCpgH67lmWtBYbvk6sz02wjky2vXyz0XErP/kFB619js1BtwfOV4OPRqOQBjy3Qbk18vigUPPSD5ceHnwck7W9bhAqZdd7SuG7w4/P2F/GaJh8c7e9qgow+Q7cGBo+98WsLkuktFqiZabtXuQTu/Y5ETbR0v7tNSFnvrmu6pjdoan2KjMu8q/Hmj1EfCO2ZGfEIbIXKUlw8qaX9/b2oeSJmFksSeT/Fn0V3nSypChh4Gjh74ybO9aeZ/AN2dwciu2/MhAAAAAElFTkSuQmCC">day02<!----></h1>  <div class="theme-vdoing-content content__default"><h2 id="jz25-合并两个排序的链表"><a href="#jz25-合并两个排序的链表" class="header-anchor">#</a> <a href="https://www.nowcoder.com/share/jump/9173034621689512225287" target="_blank" rel="noopener noreferrer">JZ25 合并两个排序的链表<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></h2> <p><img src="https://uploadfiles.nowcoder.com/badge_images/20230716/917303462_1689512234944/WRJ9Rdu13I.png" alt="图片"></p> <h3 id="迭代实现"><a href="#迭代实现" class="header-anchor">#</a> 迭代实现</h3> <div class="language-go line-numbers-mode"><pre class="language-go"><code><span class="token keyword">package</span> main
+
+
+<span class="token keyword">import</span> <span class="token punctuation">.</span> <span class="token string">&quot;nc_tools&quot;</span>
+
+<span class="token comment">/*
+ * type ListNode struct{
+ *   Val int
+ *   Next *ListNode
+ * }
+ */</span>
+
+<span class="token comment">/**
+ * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
+ *
+ *
+ * @param pHead1 ListNode类
+ * @param pHead2 ListNode类
+ * @return ListNode类
+ */</span>
+<span class="token keyword">func</span> <span class="token function">Merge</span><span class="token punctuation">(</span>pHead1 <span class="token operator">*</span>ListNode<span class="token punctuation">,</span> pHead2 <span class="token operator">*</span>ListNode<span class="token punctuation">)</span> <span class="token operator">*</span>ListNode <span class="token punctuation">{</span>
+	<span class="token keyword">if</span> pHead1 <span class="token operator">==</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+		<span class="token keyword">return</span> pHead2
+	<span class="token punctuation">}</span>
+	<span class="token keyword">if</span> pHead2 <span class="token operator">==</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+		<span class="token keyword">return</span> pHead1
+	<span class="token punctuation">}</span>
+	<span class="token keyword">var</span> head <span class="token operator">*</span>ListNode <span class="token operator">=</span> <span class="token operator">&amp;</span>ListNode<span class="token punctuation">{</span><span class="token punctuation">}</span>
+	p <span class="token operator">:=</span> head
+	<span class="token keyword">for</span> pHead1 <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token operator">&amp;&amp;</span> pHead2 <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+		<span class="token keyword">if</span> pHead1<span class="token punctuation">.</span>Val <span class="token operator">&gt;=</span> pHead2<span class="token punctuation">.</span>Val <span class="token punctuation">{</span>
+			p<span class="token punctuation">.</span>Next <span class="token operator">=</span> pHead2
+			p <span class="token operator">=</span> p<span class="token punctuation">.</span>Next
+			pHead2 <span class="token operator">=</span> pHead2<span class="token punctuation">.</span>Next
+		<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+			p<span class="token punctuation">.</span>Next <span class="token operator">=</span> pHead1
+			p <span class="token operator">=</span> p<span class="token punctuation">.</span>Next
+			pHead1 <span class="token operator">=</span> pHead1<span class="token punctuation">.</span>Next
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+	<span class="token keyword">if</span> pHead1 <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+		p<span class="token punctuation">.</span>Next <span class="token operator">=</span> pHead1
+	<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> pHead2 <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+		p<span class="token punctuation">.</span>Next <span class="token operator">=</span> pHead2
+	<span class="token punctuation">}</span>
+	<span class="token keyword">return</span> head<span class="token punctuation">.</span>Next
+<span class="token punctuation">}</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br></div></div><h3 id="递归实现"><a href="#递归实现" class="header-anchor">#</a> 递归实现</h3> <div class="language-go line-numbers-mode"><pre class="language-go"><code><span class="token keyword">package</span> main
+
+
+<span class="token keyword">import</span> <span class="token punctuation">.</span> <span class="token string">&quot;nc_tools&quot;</span>
+
+<span class="token comment">/*
+ * type ListNode struct{
+ *   Val int
+ *   Next *ListNode
+ * }
+ */</span>
+
+<span class="token comment">/**
+ * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
+ *
+ *
+ * @param pHead1 ListNode类
+ * @param pHead2 ListNode类
+ * @return ListNode类
+ */</span>
+<span class="token keyword">func</span> <span class="token function">Merge</span><span class="token punctuation">(</span>pHead1 <span class="token operator">*</span>ListNode<span class="token punctuation">,</span> pHead2 <span class="token operator">*</span>ListNode<span class="token punctuation">)</span> <span class="token operator">*</span>ListNode <span class="token punctuation">{</span>
+	<span class="token keyword">if</span> pHead1 <span class="token operator">==</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+		<span class="token keyword">return</span> pHead2
+	<span class="token punctuation">}</span>
+	<span class="token keyword">if</span> pHead2 <span class="token operator">==</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+		<span class="token keyword">return</span> pHead1
+	<span class="token punctuation">}</span>
+	<span class="token keyword">if</span> pHead1<span class="token punctuation">.</span>Val <span class="token operator">&gt;=</span> pHead2<span class="token punctuation">.</span>Val <span class="token punctuation">{</span>
+		pHead2<span class="token punctuation">.</span>Next <span class="token operator">=</span> <span class="token function">Merge</span><span class="token punctuation">(</span>pHead1<span class="token punctuation">,</span> pHead2<span class="token punctuation">.</span>Next<span class="token punctuation">)</span>
+		<span class="token keyword">return</span> pHead2
+	<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+		pHead1<span class="token punctuation">.</span>Next <span class="token operator">=</span> <span class="token function">Merge</span><span class="token punctuation">(</span>pHead1<span class="token punctuation">.</span>Next<span class="token punctuation">,</span> pHead2<span class="token punctuation">)</span>
+		<span class="token keyword">return</span> pHead1
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br></div></div><h2 id="jz52-两个链表的第一个公共结点"><a href="#jz52-两个链表的第一个公共结点" class="header-anchor">#</a> <a href="https://www.nowcoder.com/practice/6ab1d9a29e88450685099d45c9e31e46" target="_blank" rel="noopener noreferrer">JZ52 两个链表的第一个公共结点<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></h2> <p><img src="https://uploadfiles.nowcoder.com/badge_images/20230717/917303462_1689559430215/p2YmKUKFQ8.png" alt="图片"></p> <p>这题没做出来，看了<a href="https://blog.nowcoder.net/n/35c57499566646e7b3ecb250d0b99907?f=comment" target="_blank" rel="noopener noreferrer">大佬的题解<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>和<a href="https://blog.nowcoder.net/n/a0c6c80ab3134c20885a2a12e7b4282b?f=comment" target="_blank" rel="noopener noreferrer">官方的题解<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>使用 <strong>双指针解法</strong>，让两个链表走相同的长度，相等的速度，当 <code>pHead1==pHead2</code> 时就是结果，即使没有相同的公共节点，最后走完，两个都是 <code>nil</code> 也是相等的，使两个链表一定等长让 <code>pHead1+pHead2==pHead2+pHead1</code> 就好了，使用循环实现，下面这个是大佬分享的动态图，可以很清晰明了的明白。</p> <p><img src="https://cdn-static.xxcheng.cn/static/blog/images/2023/07/17/4603bbd95bd22702b78e93bde3b0d1e6.gif" alt="36"></p> <div class="language-go line-numbers-mode"><pre class="language-go"><code><span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token punctuation">.</span> <span class="token string">&quot;nc_tools&quot;</span>
+
+<span class="token comment">/*
+ * type ListNode struct{
+ *   Val int
+ *   Next *ListNode
+ * }
+ */</span>
+
+<span class="token comment">/**
+ *
+ * @param pHead1 ListNode类
+ * @param pHead2 ListNode类
+ * @return ListNode类
+ */</span>
+<span class="token keyword">func</span> <span class="token function">FindFirstCommonNode</span><span class="token punctuation">(</span>pHead1 <span class="token operator">*</span>ListNode<span class="token punctuation">,</span> pHead2 <span class="token operator">*</span>ListNode<span class="token punctuation">)</span> <span class="token operator">*</span>ListNode <span class="token punctuation">{</span>
+	h1<span class="token punctuation">,</span> h2 <span class="token operator">:=</span> pHead1<span class="token punctuation">,</span> pHead2
+	<span class="token keyword">for</span> h1 <span class="token operator">!=</span> h2 <span class="token punctuation">{</span>
+		<span class="token keyword">if</span> h1 <span class="token operator">==</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+			h1 <span class="token operator">=</span> pHead1
+		<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+			h1 <span class="token operator">=</span> h1<span class="token punctuation">.</span>Next
+		<span class="token punctuation">}</span>
+		<span class="token keyword">if</span> h2 <span class="token operator">==</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+			h2 <span class="token operator">=</span> pHead2
+		<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+			h2 <span class="token operator">=</span> h2<span class="token punctuation">.</span>Next
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+	<span class="token keyword">return</span> h1
+<span class="token punctuation">}</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br></div></div></div></div>  <div class="page-edit"><!----> <!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2023/07/29, 17:09:37</span></div></div> <div class="page-nav-wapper"><div class="page-nav-centre-wrap"><!----> <a href="/pages/ad89ef/" class="page-nav-centre page-nav-centre-next"><div class="tooltip">day03</div></a></div> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/pages/ad89ef/">day03</a>→
+      </span></p></div></div></div> <div class="article-list"><div class="article-title"><a href="/archives/" class="iconfont icon-bi">最近更新</a></div> <div class="article-wrapper"><dl><dd>01</dd> <dt><a href="/pages/bc0f7f/"><div>
+            Go：GMP模型深入理解
+            <!----></div></a> <span class="date">01-10</span></dt></dl><dl><dd>02</dd> <dt><a href="/pages/82ad4c/"><div>
+            rpc学习：进阶到gRPC
+            <!----></div></a> <span class="date">01-04</span></dt></dl><dl><dd>03</dd> <dt><a href="/pages/69ce89/"><div>
+            配置
+            <!----></div></a> <span class="date">12-12</span></dt></dl> <dl><dd></dd> <dt><a href="/archives/" class="more">更多文章&gt;</a></dt></dl></div></div></main></div> <div class="footer"><div class="icons"><a href="mailto:developer@xxcheng.cn" title="发邮件" target="_blank" class="iconfont icon-youjian"></a><a href="https://github.com/xxcheng" title="GitHub" target="_blank" class="iconfont icon-github"></a><a href="https://www.xxcheng.cn" title="首页" target="_blank" class="iconfont icon-mao"></a></div> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> 
+    | Copyright © 2019-2024
+    <span>xxcheng | <a href="http://beian.miit.gov.cn" class="icpnum" target="_blank" rel="noreferrer">浙ICP备19024050号</a></span></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <!----> <!----> <!----></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.93b3f0b1.js" defer></script><script src="/assets/js/2.aec7a7f0.js" defer></script><script src="/assets/js/32.f35acc80.js" defer></script>
+  </body>
+</html>

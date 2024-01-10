@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>聚合函数 | 小小程知识库</title>
+    <meta name="generator" content="VuePress 1.9.5">
+    <link rel="icon" href="https://cdn-static.xxcheng.cn/static/public/logo/64_64.ico">
+    <meta name="description" content="个人总结知识库,专注前端、Golang">
+    <meta name="keywords" content="xxcheng知识库,小小程知识库,知识库,前端知识库,Golang知识库,前端,前端开发,前端框架,web前端,技术文档,学习,JavaScript,js,ES6,TypeScript,vue,golang,css3,html5,Node,git,github,markdown">
+    <meta name="baidu-site-verification" content="z3ADKJ0W8g">
+    <meta name="theme-color" content="#11a8cd">
+    
+    <link rel="preload" href="/assets/css/0.styles.bf945c37.css" as="style"><link rel="preload" href="/assets/js/app.93b3f0b1.js" as="script"><link rel="preload" href="/assets/js/2.aec7a7f0.js" as="script"><link rel="preload" href="/assets/js/29.5b4cfd9b.js" as="script"><link rel="prefetch" href="/assets/js/10.300e00aa.js"><link rel="prefetch" href="/assets/js/11.0e98b3ed.js"><link rel="prefetch" href="/assets/js/12.6f626e41.js"><link rel="prefetch" href="/assets/js/13.d0c640b1.js"><link rel="prefetch" href="/assets/js/14.eebbe75b.js"><link rel="prefetch" href="/assets/js/15.b16a109f.js"><link rel="prefetch" href="/assets/js/16.9f2e200b.js"><link rel="prefetch" href="/assets/js/17.142a03c6.js"><link rel="prefetch" href="/assets/js/18.cd8ac442.js"><link rel="prefetch" href="/assets/js/19.487fc2bb.js"><link rel="prefetch" href="/assets/js/20.3cb2c94c.js"><link rel="prefetch" href="/assets/js/21.8ccae75c.js"><link rel="prefetch" href="/assets/js/22.aeababc9.js"><link rel="prefetch" href="/assets/js/23.bb235707.js"><link rel="prefetch" href="/assets/js/24.a45213d4.js"><link rel="prefetch" href="/assets/js/25.695efc2d.js"><link rel="prefetch" href="/assets/js/26.6e0dcbe0.js"><link rel="prefetch" href="/assets/js/27.1a3008d3.js"><link rel="prefetch" href="/assets/js/28.c84eaeb6.js"><link rel="prefetch" href="/assets/js/3.8522f2e0.js"><link rel="prefetch" href="/assets/js/30.02405b51.js"><link rel="prefetch" href="/assets/js/31.0de66001.js"><link rel="prefetch" href="/assets/js/32.f35acc80.js"><link rel="prefetch" href="/assets/js/33.1265ba71.js"><link rel="prefetch" href="/assets/js/34.a18cf05a.js"><link rel="prefetch" href="/assets/js/35.479f7270.js"><link rel="prefetch" href="/assets/js/36.9f67f7ae.js"><link rel="prefetch" href="/assets/js/37.80172425.js"><link rel="prefetch" href="/assets/js/38.f1e60099.js"><link rel="prefetch" href="/assets/js/39.ac180027.js"><link rel="prefetch" href="/assets/js/4.b2ea6df6.js"><link rel="prefetch" href="/assets/js/40.d00d1f40.js"><link rel="prefetch" href="/assets/js/5.f0502413.js"><link rel="prefetch" href="/assets/js/6.c2d1667e.js"><link rel="prefetch" href="/assets/js/7.7a24b5ef.js"><link rel="prefetch" href="/assets/js/8.50820b2d.js"><link rel="prefetch" href="/assets/js/9.65fae3ee.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.bf945c37.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-rightmenu"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="https://cdn-static.xxcheng.cn/static/public/logo/640_640.png" alt="小小程知识库" class="logo"> <span class="site-name can-hide">小小程知识库</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/golang/" class="nav-link">Golang</a></div><div class="nav-item"><a href="/mysql/" class="nav-link">MySQL</a></div><div class="nav-item"><a href="/archives/" class="nav-link">归档</a></div> <a href="https://github.com/xxcheng123/xxcheng-repository" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar-hover-trigger"></div> <aside class="sidebar" style="display:none;"><div class="blogger"><img src="https://cdn-static.xxcheng.cn/static/public/logo/640_640.png"> <div class="blogger-info"><h3>xxcheng</h3> <span>记录美好生活~</span></div></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/golang/" class="nav-link">Golang</a></div><div class="nav-item"><a href="/mysql/" class="nav-link">MySQL</a></div><div class="nav-item"><a href="/archives/" class="nav-link">归档</a></div> <a href="https://github.com/xxcheng123/xxcheng-repository" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>学习记录</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/pages/932c3e/" class="sidebar-link">安装 &amp; 连接</a></li><li><a href="/pages/4659bd/" class="sidebar-link">基本SELECT语句</a></li><li><a href="/pages/cfcda2/" class="sidebar-link">运算符的使用</a></li><li><a href="/pages/e921aa/" class="sidebar-link">排序与分页</a></li><li><a href="/pages/ee0146/" class="sidebar-link">多表查询</a></li><li><a href="/pages/e55a1b/" class="sidebar-link">单行函数</a></li><li><a href="/pages/e228ae/" aria-current="page" class="active sidebar-link">聚合函数</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level2"><a href="/pages/e228ae/#聚合函数" class="sidebar-link">聚合函数</a></li><li class="sidebar-sub-header level2"><a href="/pages/e228ae/#常见的聚合函数" class="sidebar-link">常见的聚合函数</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level3"><a href="/pages/e228ae/#avg、sum" class="sidebar-link">AVG、SUM</a></li><li class="sidebar-sub-header level3"><a href="/pages/e228ae/#max、min" class="sidebar-link">MAX、MIN</a></li><li class="sidebar-sub-header level3"><a href="/pages/e228ae/#count" class="sidebar-link">COUNT</a></li></ul></li><li class="sidebar-sub-header level2"><a href="/pages/e228ae/#group-by" class="sidebar-link">GROUP BY</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level3"><a href="/pages/e228ae/#with-rollup" class="sidebar-link">WITH ROLLUP</a></li></ul></li><li class="sidebar-sub-header level2"><a href="/pages/e228ae/#having" class="sidebar-link">HAVING</a></li><li class="sidebar-sub-header level2"><a href="/pages/e228ae/#初学底层-sql-执行" class="sidebar-link">初学底层 SQL 执行</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level3"><a href="/pages/e228ae/#声明顺序" class="sidebar-link">声明顺序</a></li><li class="sidebar-sub-header level3"><a href="/pages/e228ae/#执行顺序" class="sidebar-link">执行顺序</a></li></ul></li></ul></li><li><a href="/pages/57a155/" class="sidebar-link">子查询</a></li><li><a href="/pages/370acc/" class="sidebar-link">DDL 操作</a></li></ul></section></li></ul> </aside> <div><main class="page"><div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-06225672><div class="articleInfo" data-v-06225672><ul class="breadcrumbs" data-v-06225672><li data-v-06225672><a href="/" title="首页" class="iconfont icon-home router-link-active" data-v-06225672></a></li> <li data-v-06225672><a href="/mysql/#MySQL" data-v-06225672>MySQL</a></li><li data-v-06225672><a href="/mysql/#学习记录" data-v-06225672>学习记录</a></li></ul> <div class="info" data-v-06225672><div title="作者" class="author iconfont icon-touxiang" data-v-06225672><a href="https://www.xxcheng.cn/" target="_blank" title="作者" class="beLink" data-v-06225672>xxcheng</a></div> <div title="创建时间" class="date iconfont icon-riqi" data-v-06225672><a href="javascript:;" data-v-06225672>2023-07-30</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-title">目录</div> <div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABH1JREFUSA3tVl1oHFUUPmdmd2ltklqbpJDiNnXFmgbFktho7YMPNiJSSZM0+CAYSkUELVhM6YuwIPpgoOKDqOBDC0XE2CQoNtQXBUFTTcCi+Wlh1V2TQExsUzcltd3M9Tt3ZjZzZ2fT+OJTL8yeM+eee757fmeJbq//KQL8X3DUSFOcfr7cRsRtxNQMWueeVzOkaITIGqQHNg5y8+jNW9ldM7A6nTpAjuolUikAwq7CE3WcM2RRDz+XGVgN3FptU/aUSlvq9Pa3iZ1+sgAqJyyAFqkipd9dqiwHF3P65YycLWc/6sqGrvoEoIp6DOFaX5h6+dnfjkWprwqsPk0dUGq5vySwDImC10KxFHgGL1SWoc92O3eVht09qdXNH11I2SsTsJYqMWzihqGMi+A+Garf3BAuuLI5oGlULyNfyB/HYNujwktOfRrMr5t77NmevqaUopx0grnKAyvVpmwUDB4x6FPXuGvYLTDwWsejwgtgkYKPqRJg8SV6xaiZ3ZTppGneS4yfH5/66fZSDHv+QZci/+h5c5UHtpy67JUqGppM0sh0Nc1dW6/N1W5Yoqat8/TU/VnadmdeW2PLLSyh0cvxBs3KbqTmwYPpxN4do/mzE8nEpvX/UMu2Wbp74zUAK5q6WkHns7V0eWkdPbPzd3rxkTGybadYySumVzhcaJFbs5UrEkQ/+CK8gF5dnh/6ciIZ73gwQ927L1IitoxKLXYP3SjYdOrHHfTZhRRlFyrorafPk20B3HPD1y2G3qKZME5Jcf3t/HUC13/8tSd++vqFveMUTwAUxSUFI1QekR1+bIze3D9MF2aq6cPvG72CgnldWCFqyRw3lwH8ZMerjTD9ElRO7Gv44wNpC90aASqGfVlz/Rx17srQ57/UU26hkhQqUB7dBR71WmzQhHUnblGmVOEw0jhbV1n9OlXUDCIRGaNV5Jp43N516fN7JmnTHdfp7Hgy0luO4aMhtkLL8Bi3bUWYvzh5Mn1dTxrL6QmGuRhGL/TiTTxRoEdTszSaq9GR0NGA3KdkOz3hqSV3MIDhQ5IVX/Ivx3umBti2es2h4eZby7x8br1rkf7Mo90AqC8aQ3sJeNzqFRu+vSANAQe3PL7l0HGOAdwDCeZYvNKeoZp1Qfs6Aipndh86HmFRi0LAnEO47wsqM6cdfjh3jBPUzhZy7nvlUfFsamED1VQt6aISHVymXZ/B2aCtIG8AI8xfobj2d3en1wWVhOeHELKmLQ1s211s88comkv4UCwWyF787mJdYXtNfhKAXVqnKTq8QZvGAGGOfaTo5pGZ/PwbUCr5+DPr/1J92JNHr9aOl/F3iI5+O1nfybsGxoimvZ3ViWSluDITw3P37mypheDIPY0tw7+O/5ApbkYw+zpfaUVu32Pi98+defdUhEpZkRFq0aqyNh9FuL9hpYbEm6iwi0z2REd09ZmyENEbuhjDWzKvZXTqKYaBIr3tt5kuPtQBZFvEUwHt60vfCNu41XsksH9Ij1BMMz1Y0OOunHNShFIP5868g5zeXmuLwL9T4b6Q2+KejgAAAABJRU5ErkJggg==">聚合函数<!----></h1>  <div class="theme-vdoing-content content__default"><h2 id="聚合函数"><a href="#聚合函数" class="header-anchor">#</a> 聚合函数</h2> <p>作用于一组函数，只返回一个值。</p> <h2 id="常见的聚合函数"><a href="#常见的聚合函数" class="header-anchor">#</a> 常见的聚合函数</h2> <h3 id="avg、sum"><a href="#avg、sum" class="header-anchor">#</a> <code>AVG</code>、<code>SUM</code></h3> <p>只适合数值类型的字段</p> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>SELECT
+AVG(salary),SUM(salary),SUM(last_name)
+FROM employees;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><div class="language-mysql line-numbers-mode"><pre class="language-text"><code>+-------------+-------------+----------------+
+| AVG(salary) | SUM(salary) | SUM(last_name) |
++-------------+-------------+----------------+
+| 6461.682243 |      691400 |              0 |
++-------------+-------------+----------------+
+1 row in set, 107 warnings (0.0012 sec)
+Warning (code 1292): Truncated incorrect DOUBLE value: 'King'
+Warning (code 1292): Truncated incorrect DOUBLE value: 'Kochhar'
+Warning (code 1292): Truncated incorrect DOUBLE value: 'De Haan'
+-- ... ...
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h3 id="max、min"><a href="#max、min" class="header-anchor">#</a> <code>MAX</code>、<code>MIN</code></h3> <p>可以任何数据类型的字段。</p> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>SELECT
+MAX(salary),MIN(salary),MIN(last_name)
+FROM employees;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><div class="language-mysql line-numbers-mode"><pre class="language-text"><code>+-------------+-------------+----------------+
+| MAX(salary) | MIN(salary) | MIN(last_name) |
++-------------+-------------+----------------+
+|       24000 |        2100 | Abel           |
++-------------+-------------+----------------+
+1 row in set (0.0007 sec)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h3 id="count"><a href="#count" class="header-anchor">#</a> <code>COUNT</code></h3> <p>计算记录总数，支持任何数据类型，会忽略 <code>NULL</code>。</p> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>SELECT
+COUNT(*),COUNT(1),COUNT(department_id)
+FROM employees;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><div class="language-mysql line-numbers-mode"><pre class="language-text"><code>+----------+----------+----------------------+
+| COUNT(*) | COUNT(1) | COUNT(department_id) |
++----------+----------+----------------------+
+|      107 |      107 |                  106 |
++----------+----------+----------------------+
+1 row in set (0.0012 sec)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>AVG = SUM / COUNT</p> <h2 id="group-by"><a href="#group-by" class="header-anchor">#</a> <code>GROUP BY</code></h2> <p>结合<strong>聚合函数</strong>一起使用，对结果集进行分组，声明在 <code>FROM</code> 之后，<code>ORDER BY</code>、<code>LIMIT</code> 之前，<code>SELECT</code> 中<strong>非聚合函数</strong>的字段必须出现在 <code>GROUP BY</code> 中。</p> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>SELECT department_id,AVG(salary) avg_salary
+FROM employees
+GROUP BY department_id
+ORDER BY avg_salary ASC
+LIMIT 5;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><div class="language-mysql line-numbers-mode"><pre class="language-text"><code>+---------------+-------------+
+| department_id | avg_salary  |
++---------------+-------------+
+|            50 | 3475.555556 |
+|            30 |        4150 |
+|            10 |        4400 |
+|            60 |        5760 |
+|            40 |        6500 |
++---------------+-------------+
+5 rows in set (0.0010 sec)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h3 id="with-rollup"><a href="#with-rollup" class="header-anchor">#</a> <code>WITH ROLLUP</code></h3> <p><code>WITH ROLLUP</code> 是 <code>GROUP BY</code> 子句的拓展，在分组的基础上再做一个统计。</p> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>SELECT 
+department_id,
+AVG(salary) avg_salary,
+SUM(salary) sum_salary
+FROM employees
+GROUP BY department_id
+WITH ROLLUP;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><div class="language-mysql line-numbers-mode"><pre class="language-text"><code>+---------------+--------------+------------+
+| department_id | avg_salary   | sum_salary |
++---------------+--------------+------------+
+|          NULL |         7000 |       7000 |
+|            10 |         4400 |       4400 |
+|            20 |         9500 |      19000 |
+|            30 |         4150 |      24900 |
+|            40 |         6500 |       6500 |
+|            50 |  3475.555556 |     156400 |
+|            60 |         5760 |      28800 |
+|            70 |        10000 |      10000 |
+|            80 |  8955.882353 |     304500 |
+|            90 | 19333.333333 |      58000 |
+|           100 |         8600 |      51600 |
+|           110 |        10150 |      20300 |
+|          NULL |  6461.682243 |     691400 |
++---------------+--------------+------------+
+13 rows in set (0.0010 sec)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><p><strong>5.7版本及之前 <code>WITH ROLLUP</code> 与 <code>ORDER BY</code> 一起使用会报错，8.0 版本不会。</strong></p> <p><em>5.7 版本</em></p> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>mysql&gt; SELECT
+    -&gt; department_id,
+    -&gt; AVG(salary) avg_salary,
+    -&gt; SUM(salary) sum_salary
+    -&gt; FROM employees
+    -&gt; GROUP BY department_id
+    -&gt; WITH ROLLUP
+    -&gt; ORDER BY avg_salary;
+ERROR 1221 (HY000): Incorrect usage of CUBE/ROLLUP and ORDER BY
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p><em>8.0 版本</em></p> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>SQL &gt; SELECT
+	-&gt; department_id,
+	-&gt; AVG(salary) avg_salary,
+	-&gt; SUM(salary) sum_salary
+	-&gt; FROM employees
+	-&gt; GROUP BY department_id
+	-&gt; WITH ROLLUP
+	-&gt; ORDER BY avg_salary;
++---------------+--------------+------------+
+| department_id | avg_salary   | sum_salary |
++---------------+--------------+------------+
+|            50 |  3475.555556 |     156400 |
+|            30 |         4150 |      24900 |
+|            10 |         4400 |       4400 |
+|            60 |         5760 |      28800 |
+|          NULL |  6461.682243 |     691400 |
+|            40 |         6500 |       6500 |
+|          NULL |         7000 |       7000 |
+|           100 |         8600 |      51600 |
+|            80 |  8955.882353 |     304500 |
+|            20 |         9500 |      19000 |
+|            70 |        10000 |      10000 |
+|           110 |        10150 |      20300 |
+|            90 | 19333.333333 |      58000 |
++---------------+--------------+------------+
+13 rows in set (0.0012 sec)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><h2 id="having"><a href="#having" class="header-anchor">#</a> <code>HAVING</code></h2> <p>用于过滤分组的子句，必须在 <code>GROUP BY</code> 后面，开发中使用 <code>HAVING</code> 的前提是使用了 <code>GROUP BY</code>，否则没有意义。<strong>过滤条件中有聚合函数使用 <code>HAVING</code> 子句，没有聚合函数从优化角度使用 <code>WHERE</code> 子句。</strong></p> <p><em>部门中最高工资大于10000的部门</em></p> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>SELECT
+department_id,MAX(salary)
+FROM employees
+GROUP BY department_id
+HAVING MAX(salary)&gt;10000;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><div class="language-mysql line-numbers-mode"><pre class="language-text"><code>+---------------+-------------+
+| department_id | MAX(salary) |
++---------------+-------------+
+|            20 |       13000 |
+|            30 |       11000 |
+|            80 |       14000 |
+|            90 |       24000 |
+|           100 |       12000 |
+|           110 |       12000 |
++---------------+-------------+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h2 id="初学底层-sql-执行"><a href="#初学底层-sql-执行" class="header-anchor">#</a> 初学底层 <code>SQL</code> 执行</h2> <h3 id="声明顺序"><a href="#声明顺序" class="header-anchor">#</a> 声明顺序</h3> <ol><li><code>SELECT...</code></li> <li><code>DISTINCT...</code></li> <li><code>FROM...</code></li> <li><code>JOIN...ON...</code></li> <li><code>WHERE...</code></li> <li><code>GROUP BY...</code></li> <li><code>WITH ROLLUP</code></li> <li><code>HAVING...</code></li> <li><code>ORDER BY...</code></li> <li><code>LIMIT</code></li></ol> <h3 id="执行顺序"><a href="#执行顺序" class="header-anchor">#</a> 执行顺序</h3> <ol><li><code>FROM...</code></li> <li><code>JOIN...ON...</code></li> <li><code>WHERE...</code></li> <li><code>GROUP BY...</code></li> <li><code>WITH ROLLUP</code></li> <li><code>HAVING</code></li> <li><code>SELECT</code></li> <li><code>DISTINCT</code></li> <li><code>ORDER BY</code></li> <li><code>LIMIT</code></li></ol></div></div>  <div class="page-edit"><!----> <!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2023/07/30, 20:56:10</span></div></div> <div class="page-nav-wapper"><div class="page-nav-centre-wrap"><a href="/pages/e55a1b/" class="page-nav-centre page-nav-centre-prev"><div class="tooltip">单行函数</div></a> <a href="/pages/57a155/" class="page-nav-centre page-nav-centre-next"><div class="tooltip">子查询</div></a></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/pages/e55a1b/" class="prev">单行函数</a></span> <span class="next"><a href="/pages/57a155/">子查询</a>→
+      </span></p></div></div></div> <div class="article-list"><div class="article-title"><a href="/archives/" class="iconfont icon-bi">最近更新</a></div> <div class="article-wrapper"><dl><dd>01</dd> <dt><a href="/pages/bc0f7f/"><div>
+            Go：GMP模型深入理解
+            <!----></div></a> <span class="date">01-10</span></dt></dl><dl><dd>02</dd> <dt><a href="/pages/82ad4c/"><div>
+            rpc学习：进阶到gRPC
+            <!----></div></a> <span class="date">01-04</span></dt></dl><dl><dd>03</dd> <dt><a href="/pages/69ce89/"><div>
+            配置
+            <!----></div></a> <span class="date">12-12</span></dt></dl> <dl><dd></dd> <dt><a href="/archives/" class="more">更多文章&gt;</a></dt></dl></div></div></main></div> <div class="footer"><div class="icons"><a href="mailto:developer@xxcheng.cn" title="发邮件" target="_blank" class="iconfont icon-youjian"></a><a href="https://github.com/xxcheng" title="GitHub" target="_blank" class="iconfont icon-github"></a><a href="https://www.xxcheng.cn" title="首页" target="_blank" class="iconfont icon-mao"></a></div> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> 
+    | Copyright © 2019-2024
+    <span>xxcheng | <a href="http://beian.miit.gov.cn" class="icpnum" target="_blank" rel="noreferrer">浙ICP备19024050号</a></span></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <!----> <!----> <!----></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.93b3f0b1.js" defer></script><script src="/assets/js/2.aec7a7f0.js" defer></script><script src="/assets/js/29.5b4cfd9b.js" defer></script>
+  </body>
+</html>
